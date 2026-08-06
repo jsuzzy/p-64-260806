@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 public class PersonRepository {
 
     public int count() {
-        return 3;
+        return 5;
     }
 
 }
