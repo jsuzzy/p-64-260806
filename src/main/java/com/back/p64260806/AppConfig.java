@@ -12,7 +12,7 @@ public class AppConfig {
 
     @Autowired
     @Lazy
-    private AppConfig self;
+    private AppConfig self; //proxy 리모컨
 
     @Bean
     public ApplicationRunner myApplicationRunner3() {

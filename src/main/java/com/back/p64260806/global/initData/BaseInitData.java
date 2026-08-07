@@ -24,6 +24,7 @@ public class BaseInitData {
     ApplicationRunner initDataRunner() {
         return args -> {
             self.work1();
+            self.work2();
         };
 
     }
@@ -31,7 +32,7 @@ public class BaseInitData {
     @Transactional
     void work1() {
 
-        if(memberService.count() > 0) {
+        if (memberService.count() > 0) {
             return;
         }
 
@@ -42,5 +43,12 @@ public class BaseInitData {
         Member member5 = memberService.join("user3", "유저3");
 
 
+    }
+
+    @Transactional
+    void work2() {
+        System.out.println("work2 실행");
+        Member member4 = memberService.findByUsername("user2").get();
+        member4.setNickname("new user2");
     }
 }
