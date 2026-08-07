@@ -44,4 +44,10 @@ public class WiseSayingService {
     public void modify(WiseSaying wiseSaying, String content, String author) {
         wiseSaying.update(content, author);
     }
+
+    public long count(){
+        return wiseSayingMemRepository.count();
+    }
+
+
 }
